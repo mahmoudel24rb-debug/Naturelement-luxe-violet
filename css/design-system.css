@@ -6,16 +6,18 @@
    ============================================ */
 
 :root {
-  /* Palette — UNE SEULE, pas d'alias */
-  --noir:    #111110;
-  --charbon: #1A1918;
-  --bronze:  #6B5A4C;
-  --chene:   #C7A77C;
-  --miel:    #D4A15A;
-  --sable:   #D6C2A6;
-  --creme:   #F1E7D6;
-  --craie:   #F6F3EE;
+  /* Palette — Violet / Aubergine */
+  --noir:    #1E0A2E;
+  --charbon: #150825;
+  --bronze:  #2D1640;
+  --chene:   #C9A96E;
+  --miel:    #7C4DBC;
+  --sable:   #B89CC5;
+  --creme:   #F5F0F8;
+  --craie:   #E8DFF0;
   --blanc:   #FFFFFF;
+  --violet-moyen: #6B3FA0;
+  --mauve:   #9B7FB8;
 
   /* Typo */
   --font-serif: 'Cormorant Garamond', Georgia, serif;
@@ -55,15 +57,15 @@
   --radius-glass: 90px 0px 0px 0px;
 
   /* Glassmorphism */
-  --glass-bg: rgba(241, 231, 214, 0.58);
+  --glass-bg: rgba(245, 240, 248, 0.58);
   --glass-border: 2px solid rgba(255, 255, 255, 0.5);
   --glass-blur: 12px;
 
   /* Ombres */
-  --shadow-sm:   0 4px 20px rgba(22,22,22,0.08);
-  --shadow-md:   0 8px 40px rgba(22,22,22,0.12);
-  --shadow-lg:   0 20px 60px rgba(22,22,22,0.18);
-  --shadow-glow: 0 0 40px rgba(199,167,124,0.12);
+  --shadow-sm:   0 4px 20px rgba(30,10,46,0.08);
+  --shadow-md:   0 8px 40px rgba(30,10,46,0.12);
+  --shadow-lg:   0 20px 60px rgba(30,10,46,0.18);
+  --shadow-glow: 0 0 40px rgba(155,127,184,0.12);
 
   /* Transitions */
   --ease-out: cubic-bezier(0.4, 0, 0.2, 1);
@@ -93,7 +95,7 @@ a { text-decoration: none; color: inherit; transition: var(--transition); }
 img { max-width: 100%; display: block; }
 ul, ol { list-style: none; }
 
-::selection { background: var(--chene); color: var(--noir); }
+::selection { background: var(--violet-moyen); color: var(--craie); }
 ::-webkit-scrollbar { width: 5px; }
 ::-webkit-scrollbar-track { background: var(--noir); }
 ::-webkit-scrollbar-thumb { background: var(--chene); border-radius: 3px; }
