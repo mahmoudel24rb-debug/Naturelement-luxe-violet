@@ -46,6 +46,7 @@
 }
 
 /* ===== HERO — tailles augmentées, subtitle blanc ===== */
+.hero-content { padding-top: 160px; }
 .hero h1 { font-size: clamp(3rem, 6vw, 4.5rem); }
 .hero-tag { font-size: 12px; letter-spacing: 0.35em; }
 .hero-subtitle { font-size: 1.1rem; color: #fff; opacity: 0.9; }
