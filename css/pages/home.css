@@ -3,11 +3,68 @@
    Pas de :root ici — tout dans design-system.css
    ============================================ */
 
-/* Hero responsive overrides */
+/* ===== HEADER — tailles augmentées ===== */
+.header-logo { font-size: 1.5rem; }
+.header-nav a { font-size: 12px; letter-spacing: 0.2em; }
+.header-cta { font-size: 12px; padding: 10px 24px; }
+
+/* ===== DROPDOWN MENUS ===== */
+.has-dropdown { position: relative; }
+.dropdown {
+  position: absolute; top: 100%; left: 50%; transform: translateX(-50%);
+  background: rgba(30, 10, 46, 0.95); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(155,127,184,0.15); border-radius: var(--radius-sm);
+  padding: 0.6rem 0; min-width: 180px;
+  opacity: 0; visibility: hidden; pointer-events: none;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  transform: translateX(-50%) translateY(8px);
+  z-index: 110; list-style: none;
+}
+.has-dropdown:hover > .dropdown {
+  opacity: 1; visibility: visible; pointer-events: all;
+  transform: translateX(-50%) translateY(0);
+}
+.dropdown li { padding: 0; }
+.dropdown li a {
+  display: block; padding: 0.5rem 1.25rem;
+  font-size: 11px !important; letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--craie) !important; white-space: nowrap;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+.dropdown li a::after { display: none; }
+.dropdown li a:hover { background: rgba(155,127,184,0.12); color: var(--chene) !important; }
+
+/* Sous-menu (Events → EVJF, etc.) */
+.dropdown .has-dropdown { position: relative; }
+.dropdown-sub {
+  position: absolute; top: -0.6rem; left: 100%;
+  transform: translateX(0) translateY(0);
+}
+.dropdown .has-dropdown:hover > .dropdown-sub {
+  opacity: 1; visibility: visible; pointer-events: all;
+  transform: translateX(0) translateY(0);
+}
+
+/* ===== HERO — tailles augmentées, subtitle blanc ===== */
+.hero h1 { font-size: clamp(3rem, 6vw, 4.5rem); }
+.hero-tag { font-size: 12px; letter-spacing: 0.35em; }
+.hero-subtitle { font-size: 1.1rem; color: #fff; opacity: 0.9; }
+.hero-price .price-amount { font-size: 4.5rem; }
+.hero-price .price-from, .hero-price .price-unit { font-size: 1.4rem; }
+.hero-price .price-currency { font-size: 2.5rem; }
+.hero-buttons .btn { font-size: 0.875rem; padding: 16px 32px; }
+
+/* ===== CARTE CADEAU — bouton auto width ===== */
+.carte-content .btn-primary { width: auto; display: inline-flex; }
+
+/* ===== Responsive ===== */
 @media (max-width: 768px) {
   .hero h1 { font-size: clamp(2.5rem, 10vw, 4rem); }
+  .dropdown { position: static; transform: none; background: rgba(30,10,46,0.8); border: none; border-radius: 0; min-width: 100%; }
+  .has-dropdown:hover > .dropdown { transform: none; }
+  .dropdown-sub { position: static; }
 }
 @media (max-width: 480px) {
   .hero h1 { font-size: clamp(2rem, 12vw, 3rem); }
-  .hero-price .price-amount { font-size: 2rem; }
+  .hero-price .price-amount { font-size: 2.5rem; }
 }
